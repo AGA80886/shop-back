@@ -34,9 +34,11 @@ app.use(
     origin: (origin, callback) => {
       if (
         origin &&
-        ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://aga80886.github.io'].includes(
-          origin,
-        )
+        [
+          'http://localhost:3000',
+          'http://127.0.0.1:3000',
+          'https://aga80886.github.io',
+        ].includes(origin)
       ) {
         callback(null, true)
       } else {
